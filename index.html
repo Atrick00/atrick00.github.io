@@ -33,10 +33,10 @@
             margin-top: 20px;
         }
         .links a {
-            color: #000;
+            color: #007BFF; /* Blue color */
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.9em;
+            border-bottom: 1px solid #007BFF; /* Underlined */
+            padding-bottom: 2px; /* Small padding for better appearance */
         }
         .links a:hover {
             text-decoration: underline;
@@ -58,15 +58,15 @@
         }
         setInterval(updateClock, 1000);
         updateClock(); // Initial call
-
-        // Redirect after 5 seconds
-        setTimeout(function() {
-            window.location.href = 'faq.html';
-        }, 5000);
     </script>
 
     <p>I am Aidan, This website is under construction. Thank you for visiting nonetheless.</p>
     <p>Ich bin wieder ich, aber du bist nicht mehr du.</p>
     <p>Vielleicht ist das also die Hölle.</p>
+
+    <!-- Link to FAQ page -->
+    <div class="links">
+        <a href="faq.html">FAQ</a>
+    </div>
 </body>
 </html>
