@@ -46,9 +46,18 @@
 <body>
     <h1>Aidan Lopez-Barlow</h1>
     <img src="Image.jpg" alt="Image description">
-    <p>I am apBarlow, This website is under construction. Thank you for visiting nonetheless.</p>
-    <p>This is a simple static website hosted on GitHub Pages.</p>
+    <p>I am Aidan, This website is under construction. Thank you for visiting nonetheless.</p>
     <p>Ich bin wieder ich, aber du bist nicht mehr du.</p>
     <p>Vielleicht ist das also die Hölle.</p>
+
+    <script>
+        function updateClock() {
+            const options = { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            const formatter = new Intl.DateTimeFormat([], options);
+            document.getElementById('clock').textContent = "San Diego Time: " + formatter.format(new Date());
+        }
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call
+    </script>
 </body>
 </html>
