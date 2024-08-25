@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Page</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    
+    <!-- Image insertion -->
+    <img src="Image.jpg" alt="Image description" style="max-width: 100%; height: auto;">
+
+    <p>I am apBarlow, This website is under construction. Thank you for visiting nonetheless.</p>
+    <p>This is a simple static website hosted on GitHub Pages.</p>
+    <p>Ich bin wieder ich, aber du bist nicht mehr du.</p>
+    <p>Vielleicht ist das also die Hölle.</p>
+</body>
+</html>
