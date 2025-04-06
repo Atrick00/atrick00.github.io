@@ -4,43 +4,49 @@
   <meta charset="UTF-8">
   <title>Prayer.HTML</title>
   <style>
-    body {
+    html, body { /* 🔧 changed: added 'html' and 'padding' */
       margin: 0;
+      padding: 0;
+      height: 100%;
       background-color: white;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       font-family: "Times New Roman", Times, serif;
       font-size: 24px;
       color: black;
     }
+
+    .wrapper { /* 🔧 added: new flexbox wrapper */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
     .center-content {
       text-align: center;
-      max-width: 800px;
       padding: 20px;
     }
+
     img {
-      max-width: 1000px;
+      width: 1000px;  /* 🔧 changed from 'max-width: 300px' */
       height: auto;
       margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="center-content">
-    Grant me just one more ounce of strength,<br>
-    I won't run from the bad stuff,<br>
-    starting tomorrow I'll look everyone in the face,<br>
-    starting tomorrow I'll listen to everyone's voices,<br>
-    starting tomorrow I'll do things right,<br>
-    and if I'm not even allowed to have that tomorrow,<br>
-    take me instead,<br>
-    that's probably today.
-    <br><br>
-    <img src="IMG_5961.JPG" alt="Image of" width="1000" height="auto">
-
-  </div>
+  <div class="wrapper"> <!-- 🔧 added: new wrapper div -->
+    <div class="center-content">
+      Grant me just one more ounce of strength,<br>
+      I won't run from the bad stuff,<br>
+      starting tomorrow I'll look everyone in the face,<br>
+      starting tomorrow I'll listen to everyone's voices,<br>
+      starting tomorrow I'll do things right,<br>
+      and if I'm not even allowed to have that tomorrow,<br>
+      take me instead,<br>
+      that's probably today.
+      <br><br>
+      <img src="IMG_5961.JPG" alt="Image of Tom">
+    </div>
+  </div> <!-- 🔧 added: closing wrapper div -->
 </body>
 </html>
-
