@@ -89,7 +89,6 @@
       margin: 1.5rem 0;
     }
 
-    /* Optional: responsive tweaks */
     @media (max-width: 768px) {
       .sidebar {
         width: 200px;
@@ -143,45 +142,45 @@
     <!-- Essays container -->
     <div id="essays-container">
       <h2>Essays</h2>
-      <!-- Essays will load here dynamically -->
     </div>
   </div>
 
   <script>
-    const essays = [
-      { title: "Essay Title 1", file: "essays/essay1.txt" },
-      { title: "Essay Title 2", file: "essays/essay2.txt" },
-      { title: "Essay Title 3", file: "essays/essay3.txt" },
-    ];
-
     const container = document.getElementById('essays-container');
 
-    essays.forEach(essay => {
-      fetch(essay.file)
-        .then(response => response.text())
-        .then(text => {
-          const article = document.createElement('article');
-          article.classList.add('essay');
+    // Fetch the JSON file listing all essays
+    fetch('essays.json')
+      .then(res => res.json())
+      .then(essays => {
+        essays.forEach(essay => {
+          fetch(essay.file)
+            .then(resp => resp.text())
+            .then(text => {
+              const article = document.createElement('article');
+              article.classList.add('essay');
 
-          const h2 = document.createElement('h2');
-          h2.textContent = essay.title;
-          article.appendChild(h2);
+              const h2 = document.createElement('h2');
+              h2.textContent = essay.title;
+              article.appendChild(h2);
 
-          text.split('\n').forEach(paragraph => {
-            if (paragraph.trim() !== "") {
-              const p = document.createElement('p');
-              p.textContent = paragraph;
-              article.appendChild(p);
-            }
-          });
+              text.split('\n').forEach(paragraph => {
+                if(paragraph.trim() !== "") {
+                  const p = document.createElement('p');
+                  p.textContent = paragraph;
+                  article.appendChild(p);
+                }
+              });
 
-          const hr = document.createElement('hr');
-          article.appendChild(hr);
+              const hr = document.createElement('hr');
+              article.appendChild(hr);
 
-          container.appendChild(article);
-        })
-        .catch(err => console.error(`Failed to load ${essay.file}:`, err));
-    });
+              container.appendChild(article);
+            })
+            .catch(err => console.error(`Failed to load ${essay.file}:`, err));
+        });
+      })
+      .catch(err => console.error("Failed to load essays.json:", err));
   </script>
 </body>
 </html>
+
