@@ -106,11 +106,11 @@
 </head>
 <body>
   <div class="sidebar">
-    <h1>YOUR<br>NAME</h1>
-    <h2>Visual Artist</h2>
+    <h1>Aidan<br>Lopez-Barlow</h1>
+    <h2>Fixed Cyclist</h2>
     <nav>
       <a href="#">It's a Beautiful World</a>
-      <a href="#">Fire and Ice</a>
+      <a href="https://atrick00.github.io/faq.html">questions</a> //
       <a href="#">Tokyo Classics</a>
       <a href="#">Portraits</a>
       <a href="#">Hongkong</a>
@@ -118,7 +118,18 @@
       <a href="#">Contact</a>
       <a href="#">Creative Projects</a>
       <a href="#">Biography</a>
-      <a href="#">Blog</a>
+          <!-- Placeholder for the clock -->
+    <p id="clock"></p>
+
+    <script>
+        function updateClock() {
+            const options = { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            const formatter = new Intl.DateTimeFormat([], options);
+            document.getElementById('clock').textContent = "San Diego Time: " + formatter.format(new Date());
+        }
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call
+    </script>
     </nav>
     <div class="socials">
       <a href="#">🐦</a>
@@ -135,7 +146,7 @@
       Signed by YOU
     </p>
     <h2>Glare</h2>
-    <img src="Image.jpg" alt="Image.jpg">
+    <img src="IMG_3102.jpg" alt="Image.jpg">
   </div>
 </body>
 </html>
