@@ -6,7 +6,7 @@ Schüll spent over 15 years studying slot machines in Las Vegas and uncovered st
            "Some listeners might think stories about gamblers wearing diapers are exaggerated, but I’ve interviewed seemingly rational people who admitted to it. They would say, ‘I’ve never done anything like this before, and I’m ashamed, but I wear adult diapers just so I don’t have to leave the machine.’ One casino worker even mentioned that every night, certain machines would be soiled and sent out for cleaning because people wouldn’t leave to use the restroom. The intensity and frequency of the ‘loops’—playing a hand, a spin, or a round—can keep players so engrossed that they lose control. Some machines process 1,200 hands per hour, and at that speed, it’s not just that you’re choosing to continue, it feels like your body is simply unable to stop.”
 
 
-# How Infinite Scroll Mirrors Slot Machine Addiction</h1>
+# How Infinite Scroll Mirrors Slot Machine Addiction
 # An Infinite Experience
             Just as slot machines and video games offer endless gameplay, the infinite scroll feature on many apps presents an unending stream of content. Think about the games you’ve played—whether you’re driving, running, or building, the worlds often stretch on forever, allowing you to continue as long as you wish. </p>
 Infinite scroll replicates this experience on websites and apps today. You can scroll endlessly without ever reaching the bottom. Each piece of content leads to another, perpetuating a cycle where the end never comes. Even if you tire of one section or piece of content, switching to another just introduces more of the same. This endless experience parallels modern video games, which aim to pull users into a state of flow, enticing them to continue indefinitely.
@@ -42,3 +42,4 @@ Every piece of content on social platforms is often paired with music, adding to
 
 # Conclusion
 It’s no surprise that developers and designers are leveraging the same psychological tactics that make slot machines so addictive. While it’s unlikely that all of these mechanisms are consciously designed to exploit users, it’s hard to deny that many of the same principles are being employed—whether developers realize the full extent of their impact or not.
+
