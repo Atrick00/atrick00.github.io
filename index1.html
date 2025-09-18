@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #e9e6dd; /* beige background */
+      background-color: #e9e6dd; 
       color: #111;
       display: flex;
     }
@@ -111,7 +111,6 @@
       <a href="#">It's a Beautiful World, Make it yours.</a> 
       <a href="https://atrick00.github.io/faq.html">Questions?</a> 
       <a href="https://atrick00.github.io/study.html">Study!</a> 
-      <!-- Clock -->
       <p id="clock"></p> 
       <script>
         function updateClock() {
@@ -120,7 +119,7 @@
           document.getElementById('clock').textContent = "San Diego Time: " + formatter.format(new Date());
         }
         setInterval(updateClock, 1000);
-        updateClock(); // Initial call
+        updateClock(); 
       </script>
     </nav>
   </div>
@@ -141,26 +140,48 @@
     <h2>Fly</h2>
     <img src="IMG_5864.JPG" alt="Image.jpg">
 
-    <!-- Scrollable essays -->
-    <article class="essay">
-      <h2>Essay Title 1</h2>
-      <p>First essay content goes here. Multiple paragraphs allowed.</p>
-      <p>Second paragraph of essay 1...</p>
-      <hr>
-    </article>
-
-    <article class="essay">
-      <h2>Essay Title 2</h2>
-      <p>Essay 2 content goes here...</p>
-      <p>More paragraphs of essay 2...</p>
-      <hr>
-    </article>
-
-    <article class="essay">
-      <h2>Essay Title 3</h2>
-      <p>Essay 3 content goes here...</p>
-      <hr>
-    </article>
+    <!-- Essays container -->
+    <div id="essays-container">
+      <h2>Essays</h2>
+      <!-- Essays will load here dynamically -->
+    </div>
   </div>
+
+  <script>
+    const essays = [
+      { title: "Essay Title 1", file: "essays/essay1.txt" },
+      { title: "Essay Title 2", file: "essays/essay2.txt" },
+      { title: "Essay Title 3", file: "essays/essay3.txt" },
+    ];
+
+    const container = document.getElementById('essays-container');
+
+    essays.forEach(essay => {
+      fetch(essay.file)
+        .then(response => response.text())
+        .then(text => {
+          const article = document.createElement('article');
+          article.classList.add('essay');
+
+          const h2 = document.createElement('h2');
+          h2.textContent = essay.title;
+          article.appendChild(h2);
+
+          text.split('\n').forEach(paragraph => {
+            if (paragraph.trim() !== "") {
+              const p = document.createElement('p');
+              p.textContent = paragraph;
+              article.appendChild(p);
+            }
+          });
+
+          const hr = document.createElement('hr');
+          article.appendChild(hr);
+
+          container.appendChild(article);
+        })
+        .catch(err => console.error(`Failed to load ${essay.file}:`, err));
+    });
+  </script>
 </body>
 </html>
