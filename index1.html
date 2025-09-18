@@ -55,9 +55,9 @@
     /* Main content */
     .content {
       margin-left: 250px;        
-      padding: 3rem 3rem 2rem 3rem; /* more space for readability */
+      padding: 3rem 3rem 2rem 3rem;
       flex: 1;
-      max-width: 900px;          /* prevents super long lines */
+      max-width: 900px;
       box-sizing: border-box;
     }
 
@@ -94,8 +94,9 @@
     .essay p {
       margin-bottom: 1rem;
       line-height: 1.6;
-      word-wrap: break-word;
-      overflow-wrap: anywhere;
+      white-space: pre-wrap;       /* preserves line breaks from .txt */
+      overflow-wrap: break-word;   /* wraps long words naturally */
+      word-break: break-word;      /* aggressive wrapping if needed */
     }
 
     .essay hr {
@@ -180,7 +181,7 @@
               text.split('\n').forEach(paragraph => {
                 if(paragraph.trim() !== "") {
 
-                  // Check for headers
+                  // Headers
                   if(paragraph.startsWith("# ")) {
                     const h3 = document.createElement('h3');
                     h3.textContent = paragraph.replace("# ", "");
@@ -190,24 +191,16 @@
                     h4.textContent = paragraph.replace("## ", "");
                     article.appendChild(h4);
                   } else {
-                    // Split into ~22-word chunks for readability
-                    const words = paragraph.trim().split(/\s+/);
-                    let chunk = [];
-                    words.forEach((word, index) => {
-                      chunk.push(word);
-                      if ((index + 1) % 22 === 0 || index === words.length - 1) {
-                        const p = document.createElement('p');
-                        p.textContent = chunk.join(' ');
+                    // Normal paragraph
+                    const p = document.createElement('p');
+                    p.textContent = paragraph.trim();
 
-                        // Handle indents for lines starting with spaces or tabs
-                        if(paragraph.startsWith("    ") || paragraph.startsWith("\t")) {
-                          p.style.textIndent = "2em";
-                        }
+                    // Indented paragraphs
+                    if(paragraph.startsWith("    ") || paragraph.startsWith("\t")) {
+                      p.style.textIndent = "2em";
+                    }
 
-                        article.appendChild(p);
-                        chunk = [];
-                      }
-                    });
+                    article.appendChild(p);
                   }
 
                 }
