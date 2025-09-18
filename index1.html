@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name</title>
+  <title>Aidan Lopez-Barlow</title>
   <style>
     body {
       margin: 0;
@@ -52,22 +52,6 @@
       font-weight: 500;
     }
 
-    .sidebar nav a.red {
-      color: #b22222; /* red for "Print Sale" */
-    }
-
-    /* Social icons */
-    .socials {
-      margin-top: auto;
-      display: flex;
-      gap: 1rem;
-    }
-
-    .socials a {
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
-
     /* Main content */
     .content {
       margin-left: 250px;
@@ -78,16 +62,31 @@
 
     .content img {
       width: 100%;
-      max-width: 800px; /* keeps image from being too wide */
+      max-width: 800px; 
       border-radius: 8px;
       margin-top: 2rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* subtle shadow */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       display: block;
     }
 
-    .content h2 {
-      font-size: 2.5rem;
-      margin-top: 1rem;
+    /* Essay/article styling */
+    .essay {
+      margin-bottom: 2rem;
+    }
+
+    .essay h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .essay p {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .essay hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 1.5rem 0;
     }
 
     /* Optional: responsive tweaks */
@@ -107,29 +106,29 @@
 <body>
   <div class="sidebar">
     <h1>Aidan<br>Lopez-Barlow</h1>
-    <h2>Fixed Gear, Photography </h2>
+    <h2>Fixed Gear, Photography</h2>
     <nav>
       <a href="#">It's a Beautiful World, Make it yours.</a> 
       <a href="https://atrick00.github.io/faq.html">Questions?</a> 
-    <a href="https://atrick00.github.io/study.html">Study!</a> 
-          <!-- Placeholder for the clock -->
-    <p id="clock"></p> 
-
-    <script>
+      <a href="https://atrick00.github.io/study.html">Study!</a> 
+      <!-- Clock -->
+      <p id="clock"></p> 
+      <script>
         function updateClock() {
-            const options = { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
-            const formatter = new Intl.DateTimeFormat([], options);
-            document.getElementById('clock').textContent = "San Diego Time: " + formatter.format(new Date());
+          const options = { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+          const formatter = new Intl.DateTimeFormat([], options);
+          document.getElementById('clock').textContent = "San Diego Time: " + formatter.format(new Date());
         }
         setInterval(updateClock, 1000);
         updateClock(); // Initial call
-    </script>
+      </script>
     </nav>
-    </div>
   </div>
 
   <div class="content">
+    <!-- Main image/content -->
     <p>
+      Luvsic Part 2 <br>
       It's like the God in me saw the devil in you <br>
       I wanted to break myself in the worst way when I met you <br>
       Who would have thought, conversate by the river, celebrate birth <br>
@@ -138,8 +137,30 @@
       Self-assigned task piled on the desk of good works <br>
       Knowing hardship appreciate the best of both worlds <br>
     </p>
+
     <h2>Fly</h2>
     <img src="IMG_5864.JPG" alt="Image.jpg">
+
+    <!-- Scrollable essays -->
+    <article class="essay">
+      <h2>Essay Title 1</h2>
+      <p>First essay content goes here. Multiple paragraphs allowed.</p>
+      <p>Second paragraph of essay 1...</p>
+      <hr>
+    </article>
+
+    <article class="essay">
+      <h2>Essay Title 2</h2>
+      <p>Essay 2 content goes here...</p>
+      <p>More paragraphs of essay 2...</p>
+      <hr>
+    </article>
+
+    <article class="essay">
+      <h2>Essay Title 3</h2>
+      <p>Essay 3 content goes here...</p>
+      <hr>
+    </article>
   </div>
 </body>
 </html>
