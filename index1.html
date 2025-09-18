@@ -56,7 +56,7 @@
       color: #b22222; /* red for "Print Sale" */
     }
 
-    /* Social icons (placeholder text for now) */
+    /* Social icons */
     .socials {
       margin-top: auto;
       display: flex;
@@ -73,17 +73,34 @@
       margin-left: 250px;
       padding: 2rem;
       flex: 1;
+      box-sizing: border-box;
     }
 
     .content img {
       width: 100%;
-      border-radius: 4px;
+      max-width: 800px; /* keeps image from being too wide */
+      border-radius: 8px;
       margin-top: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* subtle shadow */
+      display: block;
     }
 
     .content h2 {
       font-size: 2.5rem;
       margin-top: 1rem;
+    }
+
+    /* Optional: responsive tweaks */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 200px;
+        padding: 1.5rem 0.8rem;
+      }
+
+      .content {
+        margin-left: 200px;
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -118,7 +135,7 @@
       Signed by YOU
     </p>
     <h2>Glare</h2>
-      <img src="image.jpg" alt="image.jpg">
+    <img src="image.jpg" alt="image.jpg">
   </div>
 </body>
 </html>
