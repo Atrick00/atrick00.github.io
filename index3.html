@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Recreation</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #eeeBDf; /* sampled from screenshot */
+        font-family: "IBM Plex Mono", monospace;
+        color: #1a1a1a;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .wrap {
+        position: relative;
+        width: 2560px;
+        height: 1440px;
+        transform: scale(0.5);       /* scale down for normal displays */
+        transform-origin: top left;
+    }
+
+    /* LEFT DIRECTORY TEXT */
+    .left-block {
+        position: absolute;
+        top: 165px;
+        left: 185px;
+        font-size: 23px;
+        line-height: 32px;
+        white-space: pre;
+    }
+
+    /* SUB DATE UNDER LEFT */
+    .subtime {
+        position: absolute;
+        top: 480px;
+        left: 185px;
+        font-size: 23px;
+    }
+
+    /* LARGE TOP IMAGE */
+    .img-large {
+        position: absolute;
+        top: 125px;
+        left: 735px;
+        width: 1100px;
+        height: auto;
+    }
+
+    /* LOWER SMALL IMAGE */
+    .img-small {
+        position: absolute;
+        top: 505px;
+        left: 570px;
+        width: 480px;
+        height: auto;
+    }
+
+    /* RIGHT ASCII BLOCK */
+    .right-block {
+        position: absolute;
+        top: 160px;
+        right: 380px;
+        font-size: 23px;
+        line-height: 32px;
+        white-space: pre;
+    }
+
+    /* RIGHT CONFIG TEXT */
+    .config-block {
+        position: absolute;
+        top: 610px;
+        right: 355px;
+        font-size: 23px;
+        line-height: 32px;
+        white-space: pre;
+    }
+
+    /* BOTTOM STATUS BAR */
+    .status {
+        position: absolute;
+        bottom: 165px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 23px;
+        white-space: pre;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="wrap">
+
+<div class="left-block">
+[] 2 3 4 ↩
+av/
+dl/
+doc/
+img/
+pkg/
+var/
+wrk/
+</div>
+
+<div class="subtime">
+1/7    2025-11-16 02:42
+</div>
+
+<!-- MAIN IMAGES — replace the src paths -->
+<img class="img-large" src="IMG_3102.jpg">
+<img class="img-small" src="IMG_5961.JPG">
+
+<div class="right-block">
+  ~~       
+ ( 0 )     oui@void
+  ‾‾‾ 
+
+wm: c+m
+pk: 912
+sh: mksh
+
+>_
+</div>
+
+<div class="config-block">
+fontname "$FN"
+color font "$FG"
+color menubg "$BG"
+color menufg "$FG"
+
+borderwidth 0
+snapdist 32
+sticky yes
+
+autogroup 0 "todo,st-256color"
+ignore "todo"
+
+unbind-key all
+unbind-mouse M-1
+unbind-mouse M-2
+unbind-mouse M-3
+</div>
+
+<div class="status">
+[-]   [34°C]   [47%]   [19:02]   |||||||||||||||||||||||||   [2025-11-30]
+</div>
+
+</div>
+
+</body>
+</html>
