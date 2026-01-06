@@ -106,10 +106,13 @@
     }
 
 @media (max-width: 768px) {
-  .sidebar {
-    width: 20%;        /* shrink sidebar to 20% of screen */
-    padding: 1rem;     /* keep a little padding for links */
-  }
+.sidebar {
+  width: 20%;             /* keep narrow */
+  padding: 1rem;
+  overflow-y: auto;       /* allows scrolling if content is tall */
+  white-space: normal;    /* allows text to wrap inside links */
+  box-sizing: border-box; /* include padding in width */
+}
 
   .content {
     margin-left: 20%;  /* content starts after sidebar */
