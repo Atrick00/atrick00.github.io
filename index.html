@@ -105,31 +105,46 @@
       margin: 1.5rem 0;
     }
 @media (max-width: 768px) {
+  /* Make body stack sidebar + content */
   body {
-    display: block; /* let sidebar + content stack */
+    display: block;
   }
 
+  /* Sidebar adjustments */
   .sidebar {
-    width: 100%;       /* full width at top */
-    position: relative; /* remove fixed so content flows under it */
+    width: 100%;             /* full width on small screens */
+    position: relative;       /* let content flow below it */
+    height: auto;             /* grows/shrinks with content */
+    max-height: 100vh;        /* prevent it from exceeding screen */
+    overflow-y: auto;         /* scroll if needed */
     padding: 1rem;
-    overflow-y: visible; /* no scroll needed */
-    white-space: normal; /* wrap long text */
     box-sizing: border-box;
   }
 
-  .content {
-    margin-left: 0;    /* reset margin so content starts below sidebar */
-    padding: 1rem;
-    max-width: 100%;   /* full width for essays/images */
+  /* Sidebar links */
+  .sidebar nav a {
+    display: block;           /* one link per line */
+    font-size: 1rem;
+    margin-bottom: 0.5rem;    /* spacing between links */
+    word-wrap: break-word;    /* wrap long link text */
   }
 
-  .sidebar nav a {
-    display: block;    /* each link on its own line */
-    font-size: 1rem;
-    margin-bottom: 0.5rem; /* spacing between links */
+  /* Clock styling */
+  .sidebar #clock {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    display: block;
+    word-wrap: break-word;
+  }
+
+  /* Main content */
+  .content {
+    margin-left: 0;           /* reset margin */
+    padding: 1rem;
+    max-width: 100%;          /* take full width */
   }
 }
+
 
 
 
