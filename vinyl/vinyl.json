@@ -1,18 +1,11 @@
 [
   {
-    "artist": "Radiohead",
-    "album": "OK Computer",
-    "year": 1997,
-    "cover": "images/okcomputer-cover.jpg",
-    "photo": "images/okcomputer-record.jpg",
-    "review": "This is where my thoughts go. I love the sound, the packaging, and the artwork."
+    "artist": "Lil Darkie",
+    "album": "Swamp",
+    "year": 2020,
+    "cover": "images/swamp_cover.jpg",
+    "photo": "images/SWAMP_Spread.jpg",
+    "review": "10/10, My personal Favorite Lil Darkie record with 0 Skips, Top song is 'i can see clearly.'"
   },
-  {
-    "artist": "A Tribe Called Quest",
-    "album": "Midnight Marauders",
-    "year": 1993,
-    "cover": "images/midnight-cover.jpg",
-    "photo": "images/midnight-record.jpg",
-    "review": "One of my favorite hip hop albums — smooth beats, amazing production."
-  }
+
 ]
