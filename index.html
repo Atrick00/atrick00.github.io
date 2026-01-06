@@ -105,47 +105,43 @@
       margin: 1.5rem 0;
     }
 @media (max-width: 768px) {
-  /* Make body stack sidebar + content */
   body {
     display: block;
   }
 
-  /* Sidebar adjustments */
   .sidebar {
-    width: 100%;             /* full width on small screens */
-    position: relative;       /* let content flow below it */
-    height: auto;             /* grows/shrinks with content */
-    max-height: 100vh;        /* prevent it from exceeding screen */
-    overflow-y: auto;         /* scroll if needed */
+    width: 100%;
+    position: relative;
+    height: auto;      /* allow growth */
+    max-height: none;  /* remove any height caps that might hide content */
+    overflow-y: visible; /* no scroll clipping */
     padding: 1rem;
     box-sizing: border-box;
   }
 
-  /* Sidebar links */
+  /* Links */
   .sidebar nav a {
-    display: block;           /* one link per line */
-    font-size: 1rem;
-    margin-bottom: 0.5rem;    /* spacing between links */
-    word-wrap: break-word;    /* wrap long link text */
-  }
-
-  /* Clock styling */
-  .sidebar #clock {
-    margin-top: 1rem;
-    font-size: 0.9rem;
     display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
     word-wrap: break-word;
   }
 
-  /* Main content */
+  /* Clock fix */
+  .sidebar #clock {
+    display: block;        /* ensure it's visible */
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+    clear: both;           /* forces it below all previous elements */
+  }
+
   .content {
-    margin-left: 0;           /* reset margin */
+    margin-left: 0;
     padding: 1rem;
-    max-width: 100%;          /* take full width */
+    max-width: 100%;
   }
 }
-
-
 
 
   </style>
