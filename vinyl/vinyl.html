@@ -13,7 +13,7 @@
     display: flex;
   }
 
-  /* Sidebar (same style as home) */
+  /* Sidebar */
   .sidebar {
     width: 250px;
     padding: 2rem 1rem;
@@ -27,40 +27,11 @@
     box-sizing: border-box;
   }
 
-  .sidebar h1 {
-    font-size: 2rem;
-    margin: 0;
-    font-weight: bold;
-  }
-
-  .sidebar h2 {
-    font-size: 1.2rem;
-    margin-top: 0.2rem;
-    font-weight: normal;
-    color: #555;
-  }
-
-  .sidebar nav {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-  }
-
-  .sidebar nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    word-wrap: break-word;
-  }
-
-  .sidebar #clock {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    display: block;
-    word-wrap: break-word;
-    clear: both;
-  }
+  .sidebar h1 { font-size: 2rem; margin: 0; font-weight: bold; }
+  .sidebar h2 { font-size: 1.2rem; margin-top: 0.2rem; font-weight: normal; color: #555; }
+  .sidebar nav { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.7rem; }
+  .sidebar nav a { text-decoration: none; color: black; font-weight: 500; word-wrap: break-word; }
+  .sidebar #clock { margin-top: 1rem; font-size: 0.9rem; display: block; word-wrap: break-word; clear: both; }
 
   /* Main content */
   .content {
@@ -72,10 +43,7 @@
   }
 
   /* Vinyl entries */
-  .vinyl-collection {
-    margin-top: 2rem;
-  }
-
+  .vinyl-collection { margin-top: 2rem; }
   .album-entry {
     margin-bottom: 2rem;
     padding: 1rem;
@@ -83,63 +51,24 @@
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   }
-
-  .album-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .album-header img.cover {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
-
-  .album-header h3 {
-    font-size: 1.1rem;
-    margin: 0;
-  }
-
-  .album-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  .album-content img.record-photo {
+  .album-entry img {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     border-radius: 4px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   }
-
-  .album-content p {
+  .album-entry p {
+    margin-top: 0.5rem;
     line-height: 1.5;
     white-space: pre-wrap;
   }
 
-  /* Responsive mobile adjustments */
+  /* Responsive */
   @media (max-width: 768px) {
     body { display: block; }
-
-    .sidebar {
-      width: 100%;
-      position: relative;
-      height: auto;
-      max-height: none;
-      overflow-y: visible;
-      padding: 1rem;
-    }
-
+    .sidebar { width: 100%; position: relative; height: auto; max-height: none; overflow-y: visible; padding: 1rem; }
     .sidebar nav a { display: block; font-size: 1rem; margin-bottom: 0.5rem; }
     .content { margin-left: 0; padding: 1rem; max-width: 100%; }
-
-    .album-header { flex-direction: column; align-items: flex-start; }
-    .album-header img.cover { width: 60px; height: 60px; }
-    .album-content img.record-photo { max-width: 100%; }
   }
 </style>
 </head>
@@ -148,9 +77,8 @@
     <h1>Aidan<br>Lopez-Barlow</h1>
     <h2>Vinyl & Music</h2>
     <nav>
-      <a href="../index.html">Home</a>   <!-- go up one folder -->
-      <a href="vinyl.html">Vinyl Collection</a> <!-- stays in same folder -->
-      <!-- add more sidebar links as needed -->
+      <a href="../index.html">Home</a>
+      <a href="vinyl.html">Vinyl Collection</a>
       <p id="clock"></p>
       <script>
         function updateClock() {
@@ -170,7 +98,7 @@
   </div>
 
   <script>
-    // Dynamic loading from JSON
+    // Load vinyl JSON and generate gallery
     fetch('vinyl.json')
       .then(res => res.json())
       .then(vinyls => {
@@ -179,16 +107,9 @@
           const article = document.createElement('article');
           article.className = 'album-entry';
           article.innerHTML = `
-            <div class="album-header">
-              <img class="cover" src="${v.cover}" alt="${v.album} Cover">
-              <h3>${v.artist} – ${v.album} (${v.year})</h3>
-            </div>
-              <p>${v.review}</p>
-            </div>
+            <img src="${v.photo}" alt="${v.artist} – ${v.album}">
+            <p><strong>${v.artist} – ${v.album} (${v.year})</strong><br>${v.review}</p>
           `;
           container.appendChild(article);
         });
-      });
-  </script>
-</body>
-</html>
+      })
