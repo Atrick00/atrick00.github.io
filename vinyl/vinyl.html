@@ -51,16 +51,22 @@
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   }
-  .album-entry img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  .album-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
-  .album-entry p {
-    margin-top: 0.5rem;
-    line-height: 1.5;
-    white-space: pre-wrap;
+
+  .album-header img.cover {
+    width: 80px;   /* small cover size */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .album-header p {
+    margin: 0;
   }
 
   /* Responsive */
@@ -69,6 +75,8 @@
     .sidebar { width: 100%; position: relative; height: auto; max-height: none; overflow-y: visible; padding: 1rem; }
     .sidebar nav a { display: block; font-size: 1rem; margin-bottom: 0.5rem; }
     .content { margin-left: 0; padding: 1rem; max-width: 100%; }
+    .album-header { flex-direction: column; align-items: flex-start; }
+    .album-header img.cover { width: 60px; height: 60px; }
   }
 </style>
 </head>
@@ -107,8 +115,10 @@
           const article = document.createElement('article');
           article.className = 'album-entry';
           article.innerHTML = `
-            <img src="${v.photo}" alt="${v.artist} – ${v.album}">
-            <p><strong>${v.artist} – ${v.album} (${v.year})</strong><br>${v.review}</p>
+            <div class="album-header">
+              <img class="cover" src="${v.photo}" alt="${v.artist} – ${v.album}">
+              <p><strong>${v.artist} – ${v.album} (${v.year})</strong><br>${v.review}</p>
+            </div>
           `;
           container.appendChild(article);
         });
