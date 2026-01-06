@@ -107,15 +107,22 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 240px; /* was 200px, increase slightly */
-    padding: 1.5rem 0.8rem;
+    width: 20%;        /* shrink sidebar to 20% of screen */
+    padding: 1rem;     /* keep a little padding for links */
   }
 
   .content {
-    margin-left: 240px;
-    padding: 1.5rem;
+    margin-left: 20%;  /* content starts after sidebar */
+    padding: 1rem;     /* adjust content padding for small screens */
+    max-width: 80%;    /* essay area takes 80% of screen */
+  }
+
+  /* Optional: make links smaller so they fit better */
+  .sidebar nav a {
+    font-size: 0.9rem;
   }
 }
+
 
   </style>
 </head>
