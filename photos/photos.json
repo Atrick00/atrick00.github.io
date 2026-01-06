@@ -1,1 +1,12 @@
-
+[
+  {
+    "img": "images/photo1.jpg",
+    "date": "2026-01-01",
+    "description": "A chill afternoon at Mission Trails."
+  },
+  {
+    "img": "images/photo2.jpg",
+    "date": "2025-12-25",
+    "description": "Holiday vibes in downtown San Diego."
+  }
+]
