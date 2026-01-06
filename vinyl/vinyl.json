@@ -3,16 +3,16 @@
     "artist": "Radiohead",
     "album": "OK Computer",
     "year": 1997,
-    "cover": "vinyl/okcomputer-cover.jpg",
-    "photo": "vinyl/okcomputer-record.jpg",
+    "cover": "images/okcomputer-cover.jpg",
+    "photo": "images/okcomputer-record.jpg",
     "review": "This is where my thoughts go. I love the sound, the packaging, and the artwork."
   },
   {
     "artist": "A Tribe Called Quest",
     "album": "Midnight Marauders",
     "year": 1993,
-    "cover": "vinyl/midnight-cover.jpg",
-    "photo": "vinyl/midnight-record.jpg",
+    "cover": "images/midnight-cover.jpg",
+    "photo": "images/midnight-record.jpg",
     "review": "One of my favorite hip hop albums — smooth beats, amazing production."
   }
 ]
