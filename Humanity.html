@@ -1,84 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rules for Being Humman - Aidan Lopez-Barlow</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', serif;
-            font-size: 14px; /* Adjust this value to your preferred size */
-            color: black;
-            background-color: white; /* Ensures there's no background color */
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            font-size: 1.5em; /* Adjust size relative to base font-size */
-        }
-        h2 {
-            font-size: 1.0em; /* Adjust size relative to base font-size */
-        }
-        .faq-item p {
-            font-size: 0.9em; /* Adjust size relative to base font-size */
-        }
-        .back-link {
-            font-size: 0.8em; /* Adjust size relative to base font-size */
-            color: black;
-            text-decoration: none;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rules for Being Human - Aidan Lopez-Barlow</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #e9e6dd;
+      color: #111;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 300px;
+      padding: 2rem 1rem;
+      background-color: #d3d3d3;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: fixed;
+      height: 100vh;
+    }
+
+    .sidebar h1 { font-size: 2rem; margin: 0; font-weight: bold; line-height: 1.2; }
+    .sidebar h2 { font-size: 1.2rem; margin-top: 0.2rem; font-weight: normal; color: #555; }
+    .sidebar nav { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.7rem; }
+    .sidebar nav a { text-decoration: none; color: black; font-weight: 500; }
+    .sidebar #clock { margin-top: 1rem; font-size: 0.9rem; }
+
+    /* Main content */
+    .content {
+      margin-left: 320px;
+      padding: 3rem;
+      flex: 1;
+      max-width: 900px;
+      box-sizing: border-box;
+    }
+
+    h1 { font-size: 2rem; margin-bottom: 1rem; }
+    h2 { font-size: 1.2rem; margin-bottom: 0.3rem; }
+
+    .faq-item { margin-bottom: 1.5rem; }
+    .faq-item p { margin: 0.3rem 0 0 0; line-height: 1.5; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: black;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      body { display: block; }
+      .sidebar { width: 100%; position: relative; height: auto; max-height: none; overflow-y: visible; padding: 1rem; }
+      .sidebar nav a { font-size: 1rem; margin-bottom: 0.5rem; word-wrap: break-word; }
+      .content { margin-left: 0; padding: 1rem; max-width: 100%; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Rules for being human By Fr. Louis Guntzelman</h1>
+  <div class="sidebar">
+    <h1>Aidan<br>Lopez-Barlow</h1>
+    <h2>Fixed Gear, Photography</h2>
+    <nav>
+      <a href="#"> -- It's a Beautiful World, Make it yours. -- </a>
+      <a href="faq.html">FAQ</a>
+      <a href="study.html">Study!</a>
+      <a href="#"> -- Constantly Maintained -- </a>
+      <a href="vinyl/vinyl.html">Vinyl Collection</a>
+      <a href="photos/photos.html">Photo Collection</a>
+      <a href="#"> -- More Essays -- </a>
+      <a href="Focus_continued.html">Focus</a>
+      <a href="SMSCP.html">Social Media</a>
+      <a href="Life_continued.html">Life</a>
+      <a href="Phones_continued.html">Phones</a>
+      <a href="Books.html">Books</a>
+      <a href="Humanity.html">Words</a>
+      <a href="Blog/">Blog</a>
+      <p id="clock"></p>
+      <script>
+        function updateClock() {
+          const options = { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+          const formatter = new Intl.DateTimeFormat([], options);
+          document.getElementById('clock').textContent = "San Diego Time: " + formatter.format(new Date());
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+      </script>
+    </nav>
+  </div>
+
+  <div class="content">
+    <h1>Rules for Being Human</h1>
     <div class="faq-container">
-        <div class="faq-item">
-            <h2>1.</h2>
-            <p>You will receive a body. You may like it or hate it, but it will be yours for your entire period here.</p>
-        </div>
-        <div class="faq-item">
-            <h2>2.</h2>
-            <p> You will learn lessons. You are really enrolled in a full-time informal school called life. Each day you will have the opportunity to learn lessons. You may like the lessons, think them irrelevant, stupid, or too hard. It makes no difference, you will learn lessons.</p>
-
-        </div>
-        <div class="faq-item">
-            <h2>3.</h2>
-            <p>There are no mistakes, only lessons. You are made to grow, and growth is a process of trial and error, experimentation. The pains of "failed" experiments are as much a part of the process as the ones that ultimately "work."</p>
-
-        </div>
-        <div class="faq-item">
-            <h2>4.</h2>
-            <p>A lesson will be repeated until it is learned. The same lesson will be presented to you in various forms, until you have learned it. When you have learned it, you can then go on to the next lesson.</p>
-        </div>
-            <div class="faq-item">
-            <h2>5.</h2>
-            <p>Learning lessons does not end. There is no part of the process of life that does not contain its lesson. If you are alive, there are lessons to be learned.</p>
-        </div>
-                <div class="faq-item">
-            <h2>6.</h2>
-            <p>"There" is no better than "here." When your "there" has become a "here," you will simply obtain another "there" that will again look better than "here." Always appreciate the "here."</p>
-        </div>
-                <div class="faq-item">
-            <h2>7.</h2>
-            <p>Others are merely mirrors of you. You cannot love or hate something about another person unless it reflects to you something you love or hate about yourself.</p>
-        </div>
-            <div class="faq-item">
-            <h2>8.</h2>
-            <p>What you make of life is up to you. You have all the tools and resources you need in your mind, heart, and body. What you do with them and what attitudes you form is up to you. The choice is yours. Nobody "makes" you.</p>
-        </div>
-            <div class="faq-item">
-            <h2>9.</h2>
-            <p>The answers to life's questions lie inside you. You need only look, listen, and understand.</p>
-        </div>
-            <div class="faq-item">
-            <h2>10.</h2>
-            <p> In the most essential things of life, you will forget all this. You will remember it when you need it. This happens because of your life's toughest choices and attitudes. You may not want what you will get, but it will be what you asked for.</p>
-        </div>
+      <div class="faq-item"><h2>1.</h2><p>You will receive a body. You may like it or hate it, but it will be yours for your entire period here.</p></div>
+      <div class="faq-item"><h2>2.</h2><p>You will learn lessons. You are really enrolled in a full-time informal school called life. Each day you will have the opportunity to learn lessons. You may like the lessons, think them irrelevant, stupid, or too hard. It makes no difference, you will learn lessons.</p></div>
+      <div class="faq-item"><h2>3.</h2><p>There are no mistakes, only lessons. You are made to grow, and growth is a process of trial and error, experimentation. The pains of "failed" experiments are as much a part of the process as the ones that ultimately "work."</p></div>
+      <div class="faq-item"><h2>4.</h2><p>A lesson will be repeated until it is learned. The same lesson will be presented to you in various forms, until you have learned it. When you have learned it, you can then go on to the next lesson.</p></div>
+      <div class="faq-item"><h2>5.</h2><p>Learning lessons does not end. There is no part of the process of life that does not contain its lesson. If you are alive, there are lessons to be learned.</p></div>
+      <div class="faq-item"><h2>6.</h2><p>"There" is no better than "here." When your "there" has become a "here," you will simply obtain another "there" that will again look better than "here." Always appreciate the "here."</p></div>
+      <div class="faq-item"><h2>7.</h2><p>Others are merely mirrors of you. You cannot love or hate something about another person unless it reflects to you something you love or hate about yourself.</p></div>
+      <div class="faq-item"><h2>8.</h2><p>What you make of life is up to you. You have all the tools and resources you need in your mind, heart, and body. What you do with them and what attitudes you form is up to you. The choice is yours. Nobody "makes" you.</p></div>
+      <div class="faq-item"><h2>9.</h2><p>The answers to life's questions lie inside you. You need only look, listen, and understand.</p></div>
+      <div class="faq-item"><h2>10.</h2><p>In the most essential things of life, you will forget all this. You will remember it when you need it. This happens because of your life's toughest choices and attitudes. You may not want what you will get, but it will be what you asked for.</p></div>
     </div>
+
     <a href="index.html" class="back-link"> - Home - </a>
+  </div>
 </body>
 </html>
-
