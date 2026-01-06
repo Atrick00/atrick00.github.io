@@ -97,30 +97,25 @@
   </div>
 
   <script>
-    // Inline JSON data (no fetch needed)
-    const photos = [
-      {
-        "img": "photos/images/desk.JPG",
-        "date": "2026-01-02",
-        "description": "Starting 2026 with a clean setup!"
-      },
-      {
-        "img": "photos/images/keyboard-and-mouse.JPG",
-        "date": "2026-01-02",
-        "description": "Keyboard and mouse 2026 edition!"
-      }
-    ];
-
-    const container = document.getElementById('photo-container');
-    photos.forEach(p => {
-      const article = document.createElement('article');
-      article.className = 'photo-entry';
-      article.innerHTML = `
-        <img src="${encodeURI(p.img)}" alt="Photo">
-        <div class="photo-meta">${p.date} — ${p.description}</div>
-      `;
-      container.appendChild(article);
-    });
+    // Fetch gallery JSON (easy to update)
+    fetch('photos.json')
+      .then(res => res.json())
+      .then(photos => {
+        const container = document.getElementById('photo-container');
+        photos.forEach(p => {
+          const article = document.createElement('article');
+          article.className = 'photo-entry';
+          article.innerHTML = `
+            <img src="${encodeURI(p.img)}" alt="Photo">
+            <div class="photo-meta">${p.date} — ${p.description}</div>
+          `;
+          container.appendChild(article);
+        });
+      })
+      .catch(err => {
+        console.error("Failed to load photos.json:", err);
+        document.getElementById('photo-container').innerHTML = "<p>Could not load photos. Make sure photos.json exists and paths are correct.</p>";
+      });
   </script>
 </body>
 </html>
