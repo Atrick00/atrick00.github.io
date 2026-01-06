@@ -104,28 +104,33 @@
       border-top: 1px solid #ccc;
       margin: 1.5rem 0;
     }
-
 @media (max-width: 768px) {
-.sidebar {
-  width: 20%;             /* keep narrow */
-  padding: 1rem;
-  overflow-y: auto;       /* allows scrolling if content is tall */
-  white-space: normal;    /* allows text to wrap inside links */
-  box-sizing: border-box; /* include padding in width */
-}
-.content {
-  margin-left: 20%;   /* matches the new sidebar width */
-  padding: 1rem;
-  max-width: 80%;     /* essay area takes the rest of the screen */
-  position: relative; /* ensures it stays next to sidebar */
-}
+  body {
+    display: block; /* let sidebar + content stack */
+  }
 
+  .sidebar {
+    width: 100%;       /* full width at top */
+    position: relative; /* remove fixed so content flows under it */
+    padding: 1rem;
+    overflow-y: visible; /* no scroll needed */
+    white-space: normal; /* wrap long text */
+    box-sizing: border-box;
+  }
 
-  /* Optional: make links smaller so they fit better */
+  .content {
+    margin-left: 0;    /* reset margin so content starts below sidebar */
+    padding: 1rem;
+    max-width: 100%;   /* full width for essays/images */
+  }
+
   .sidebar nav a {
-    font-size: 0.9rem;
+    display: block;    /* each link on its own line */
+    font-size: 1rem;
+    margin-bottom: 0.5rem; /* spacing between links */
   }
 }
+
 
 
   </style>
