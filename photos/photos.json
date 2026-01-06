@@ -1,12 +1,12 @@
 [
   {
-    "img": "images/photo1.jpg",
-    "date": "2026-01-01",
-    "description": "A chill afternoon at Mission Trails."
+    "img": "photos/images/Desk.JPG",
+    "date": "2026-01-02",
+    "description": "Starting 2026 with a clean setup!"
   },
   {
-    "img": "images/photo2.jpg",
-    "date": "2025-12-25",
-    "description": "Holiday vibes in downtown San Diego."
+    "img": "photos/images/Keyboard and Mouse.JPG",
+    "date": "2026-01-02",
+    "description": "Keyboard and mouse 2026 edition!"
   }
 ]
