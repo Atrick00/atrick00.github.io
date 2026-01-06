@@ -1,78 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeepWork - Aidan Lopez-Barlow</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', serif;
-            font-size: 14px; /* Adjust this value to your preferred size */
-            color: black;
-            background-color: white; /* Ensures there's no background color */
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            font-size: 1.5em; /* Adjust size relative to base font-size */
-        }
-        h2 {
-            font-size: 1.0em; /* Adjust size relative to base font-size */
-        }
-        .faq-item p {
-            font-size: 0.9em; /* Adjust size relative to base font-size */
-        }
-        .back-link {
-            font-size: 0.8em; /* Adjust size relative to base font-size */
-            color: black;
-            text-decoration: none;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deep Work - Aidan Lopez-Barlow</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #e9e6dd;
+      color: #111;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 300px;
+      padding: 2rem 1rem;
+      background-color: #d3d3d3;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: fixed;
+      height: 100vh;
+    }
+
+    .sidebar h1 { font-size: 2rem; margin: 0; font-weight: bold; line-height: 1.2; }
+    .sidebar h2 { font-size: 1.2rem; margin-top: 0.2rem; font-weight: normal; color: #555; }
+    .sidebar nav { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.7rem; }
+    .sidebar nav a { text-decoration: none; color: black; font-weight: 500; }
+    .sidebar #clock { margin-top: 1rem; font-size: 0.9rem; }
+
+    /* Main content */
+    .content {
+      margin-left: 320px;
+      padding: 3rem;
+      flex: 1;
+      max-width: 900px;
+      box-sizing: border-box;
+    }
+
+    h1 { font-size: 2rem; margin-bottom: 2rem; }
+    h2 { margin-top: 1.5rem; font-size: 1.2rem; }
+    p { font-size: 1rem; line-height: 1.6; }
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: black;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      body { display: block; }
+      .sidebar { width: 100%; position: relative; height: auto; max-height: none; overflow-y: visible; padding: 1rem; }
+      .content { margin-left: 0; padding: 1rem; max-width: 100%; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Deep Work by Cal Newport, Why?</h1>
-    <div class="faq-container">
-        <div class="faq-item">
-            <h2>Intro</h2>
-            <p>In today’s hyperconnected world, distraction is the norm. We live in an era where attention is constantly pulled in a thousand directions, where multitasking is celebrated, and where being busy is equated with being productive. But as convenient as it is to juggle multiple tasks at once, there’s a growing concern that our ability to engage in deep, focused work is diminishing. Cal Newport’s *Deep Work* challenges us to reconsider this shift and advocates for a return to concentrated, undistracted effort. In doing so, Newport presents a compelling case for why cultivating deep work is not just beneficial, but essential in an increasingly distracted world.</p>
-        </div>
-        <div class="faq-item">
-            <h2>The Decline of Focus</h2>
-            <p>We’ve become accustomed to interruptions. Whether it’s the ping of a notification, the lure of social media, or the ease of switching between tasks, our focus is fragmented. This constant state of partial attention not only hinders our ability to engage deeply with complex tasks but also impacts the quality of our work. Newport argues that the ability to focus intensely on a single task is a rare and valuable skill—one that is becoming increasingly scarce in the modern workplace. As the demand for deep work decreases, so too does our capacity to produce meaningful, high-quality results.</p>
-        </div>
-        <div class="faq-item">
-            <h2>The Cost of Shallow Work</h2>
-            <p>Shallow work—tasks that are easy to replicate and don’t require much cognitive effort—has become the default mode for many of us. Checking emails, attending meetings, and updating spreadsheets are all examples of shallow work that fill our days but leave little room for deep, creative thinking. Newport warns that relying too heavily on shallow work can lead to a decline in overall productivity and creativity. When we prioritize shallow tasks, we risk losing the ability to engage in the kind of deep work that drives innovation and progress.</p>
-        </div>
-        <div class="faq-item">
-            <h2>The Case for Deep work </h2>
-            <p>Imagine a day where you can focus solely on a single, important task—where you’re not constantly interrupted by notifications, and where you can immerse yourself fully in your work. This might seem like a luxury in today’s fast-paced world, but Newport argues that it’s not only possible but necessary. Deep work allows us to tap into our full cognitive potential, to produce work that is not only efficient but also meaningful. By carving out time for deep work, we can achieve greater clarity, creativity, and satisfaction in our professional lives.</p>
-        </div>
-        <div class="faq-item">
-            <h2>Reclaiming Focus</h2>
-            <p>One of the most significant challenges of practicing deep work is reclaiming our focus in a world designed to distract us. Newport offers practical strategies for doing so, such as scheduling dedicated blocks of time for deep work, minimizing distractions, and embracing boredom as a way to reset our brains. These strategies may seem simple, but they require a conscious effort to implement. By taking control of our attention, we can create the conditions necessary for deep work and, in turn, produce higher-quality results.</p>
-        </div>
-        <div class="faq-item">
-            <h2>The Value of Solitude</h2>
-            <p>Solitude is essential for deep work. It provides the mental space needed to think critically, to reflect on complex problems, and to engage in deep, uninterrupted thought. Yet, in our always-connected world, solitude is often undervalued or even avoided. Newport highlights the importance of seeking out solitude, whether through physical isolation or by disconnecting from digital distractions. By embracing solitude, we can create an environment conducive to deep work, where our minds can operate at their fullest capacity.</p>
-        </div>
-        <div class="faq-item">
-            <h2>Embracing a Deep Work Mindset</h2>
-            <p>Ultimately, cultivating deep work is about more than just improving productivity; it’s about embracing a mindset that values focus, creativity, and quality over quantity. Newport challenges us to rethink our relationship with work, to prioritize depth over breadth, and to seek out opportunities for focused, meaningful effort. By adopting a deep work mindset, we can achieve not only professional success but also a greater sense of fulfillment and purpose in our lives. </p>
-        </div>
-        <div class="faq-item">
-            <h2>Silence</h2>
-            <p>Silence is a powerful force in Goodnight Punpun. Punpun’s inability to express his feelings becomes a burden that weighs heavily on him throughout the story. This silence isn’t just about not talking—it’s about the crushing inability to communicate what’s really going on inside. It’s a reflection of how hard it can be to open up, to be vulnerable, and to ask for help. This theme is something a lot of us can relate to—the fear of being judged, misunderstood, or rejected can keep us silent, even when we’re struggling the most. In Goodnight Punpun, silence becomes both a shield and a prison, trapping the characters in their own misery.</p>
-        </div>
-        <div class="faq-item">
-            <h2>Concluding Thoughts </h2>
-            <p>As we navigate a world that increasingly values speed and multitasking, Newport’s *Deep Work* serves as a timely reminder of the importance of focus and concentration. The ability to engage in deep, meaningful work is a skill that is becoming more valuable—and more rare—in our distraction-filled lives. By embracing the principles of deep work, we can reclaim our attention, produce higher-quality work, and find greater satisfaction in our professional and personal lives. The journey toward deep work is not just about becoming more productive; it’s about rediscovering the value of focus and the rewards that come with it.</p>
-        </div>
-        </div>
-    </div>
-    <a href="index.html" class="back-link"> - Home - </a>
+  <div class="sidebar">
+    <h1>Aidan<br>Lopez-Barlow</h1>
+    <h2>Fixed Gear, Photography</h2>
+    <nav>
+      <a href="#"> -- It's a Beautiful World, Make it yours. -- </a>
+      <a href="faq.html">FAQ</a>
+      <a href="study.html">Study!</a>
+      <a href="#"> -- Constantly Maintained -- </a>
+      <a href="vinyl/vinyl.html">Vinyl Collection</a>
+      <a href="photos/photos.html">Photo Collection</a>
+      <a href="#"> -- More Essays -- </a>
+      <a href="Focus_continued.html">Focus</a>
+      <a href="SMSCP.html">Social Media</a>
+      <a href="Life_continued.html">Life</a>
+      <a href="Phones_continued.html">Phones</a>
+      <a href="Books.html">Books</a>
+      <a href="Humanity.html">Words</a>
+      <a href="Blog/">Blog</a>
+      <p id="clock"></p>
+      <script>
+        function updateClock() {
+          const options = { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+          const formatter = new Intl.DateTimeFormat([], options);
+          document.getElementById('clock').textContent = "San Diego Time: " + formatter.format(new Date());
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+      </script>
+    </nav>
+  </div>
+
+  <div class="content">
+    <h1>Deep Work by Cal Newport</h1>
+
+    <h2>Intro</h2>
+    <p>In today’s hyperconnected world, distraction is the norm. We live in an era where attention is constantly pulled in a thousand directions, where multitasking is celebrated, and where being busy is equated with being productive. But as convenient as it is to juggle multiple tasks at once, there’s a growing concern that our ability to engage in deep, focused work is diminishing. Cal Newport’s <em>Deep Work</em> challenges us to reconsider this shift and advocates for a return to concentrated, undistracted effort. In doing so, Newport presents a compelling case for why cultivating deep work is not just beneficial, but essential in an increasingly distracted world.</p>
+
+    <h2>The Decline of Focus</h2>
+    <p>We’ve become accustomed to interruptions. Whether it’s the ping of a notification, the lure of social media, or the ease of switching between tasks, our focus is fragmented. This constant state of partial attention not only hinders our ability to engage deeply with complex tasks but also impacts the quality of our work. Newport argues that the ability to focus intensely on a single task is a rare and valuable skill—one that is becoming increasingly scarce in the modern workplace. As the demand for deep work decreases, so too does our capacity to produce meaningful, high-quality results.</p>
+
+    <h2>The Cost of Shallow Work</h2>
+    <p>Shallow work—tasks that are easy to replicate and don’t require much cognitive effort—has become the default mode for many of us. Checking emails, attending meetings, and updating spreadsheets are all examples of shallow work that fill our days but leave little room for deep, creative thinking. Newport warns that relying too heavily on shallow work can lead to a decline in overall productivity and creativity. When we prioritize shallow tasks, we risk losing the ability to engage in the kind of deep work that drives innovation and progress.</p>
+
+    <h2>The Case for Deep Work</h2>
+    <p>Imagine a day where you can focus solely on a single, important task—where you’re not constantly interrupted by notifications, and where you can immerse yourself fully in your work. This might seem like a luxury in today’s fast-paced world, but Newport argues that it’s not only possible but necessary. Deep work allows us to tap into our full cognitive potential, to produce work that is not only efficient but also meaningful. By carving out time for deep work, we can achieve greater clarity, creativity, and satisfaction in our professional lives.</p>
+
+    <h2>Reclaiming Focus</h2>
+    <p>One of the most significant challenges of practicing deep work is reclaiming our focus in a world designed to distract us. Newport offers practical strategies for doing so, such as scheduling dedicated blocks of time for deep work, minimizing distractions, and embracing boredom as a way to reset our brains. These strategies may seem simple, but they require a conscious effort to implement. By taking control of our attention, we can create the conditions necessary for deep work and, in turn, produce higher-quality results.</p>
+
+    <h2>The Value of Solitude</h2>
+    <p>Solitude is essential for deep work. It provides the mental space needed to think critically, to reflect on complex problems, and to engage in deep, uninterrupted thought. Yet, in our always-connected world, solitude is often undervalued or even avoided. Newport highlights the importance of seeking out solitude, whether through physical isolation or by disconnecting from digital distractions. By embracing solitude, we can create an environment conducive to deep work, where our minds can operate at their fullest capacity.</p>
+
+    <h2>Embracing a Deep Work Mindset</h2>
+    <p>Ultimately, cultivating deep work is about more than just improving productivity; it’s about embracing a mindset that values focus, creativity, and quality over quantity. Newport challenges us to rethink our relationship with work, to prioritize depth over breadth, and to seek out opportunities for focused, meaningful effort. By adopting a deep work mindset, we can achieve not only professional success but also a greater sense of fulfillment and purpose in our lives.</p>
+
+    <a href="Books.html" class="back-link"> - Back to Books - </a>
+  </div>
 </body>
 </html>
