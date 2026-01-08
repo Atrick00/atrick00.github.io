@@ -1,5 +1,12 @@
 [
   {
+    "artist": "Michael Jackson",
+    "album": "Bad",
+    "year": 1987,
+    "photo": "images/bad_cover.jpg",
+    "review": "07/10, a fairly good vibes record, honestly? Nothing Special, It's Michael fucking Jackson! Favorite tracks: 'Speed Demon'."
+  },
+  {
     "artist": "Lil Darkie",
     "album": "Swamp",
     "year": 2020,
